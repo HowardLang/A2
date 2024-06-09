@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+
+        // 組織圖資料
+        data.addRows([
+          [{v:'王賀平', f:'王賀平<div style="color:red; font-style:italic">鳳凰專案執行長</div>'},
+           ''],
+          ['Kevin', '王賀平'],
+          ['小名', 'Kevin'],
+          ['陳明嬿', '王賀平'],
+          ['吳美方', '陳明嬿'],
+          ['杜錫賢', '吳美方'],
+          ['張冠博', '杜錫賢'],
+          ['劉鑫', '張冠博'],
+          ['陳秋蓉', '劉鑫'],
+          ['杜登進', '陳秋蓉'],
+          ['陳明君', '杜登進'],
+          ['陳宏宇', '陳明君'],
+          ['劉湘綺', '陳宏宇'],
+          ['顏秀蓉', '劉湘綺'],
+          ['陳儀坦', '顏秀蓉'],
+          ['徐慧馨', '陳儀坦'],
+          ['徐西文', '徐慧馨'],
+          ['徐葉秀花', '徐西文'],
+          ['陳明宗', '徐葉秀花'],
+          ['吳林玉雲', '陳明宗'],
+          ['方麗玲', '吳林玉雲'],
+          ['林易辰', '方麗玲'],
+          ['林易賢', '林易辰'],
+          ['林顯坤', '林易賢'],
+
+
+          
+
+
+
+
+        ]);
+
+        // 創建組織圖
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        chart.draw(data, {'allowHtml':true});
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
